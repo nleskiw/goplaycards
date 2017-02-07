@@ -152,8 +152,6 @@ func remove(slice []Card, i int64) []Card {
 
 // Draw will remove cards from the beginning of the deck (index 0)
 // and return a slice of []Card type.
-// This permanently removes these cards from the deck and reduces the length of
-// the deck
 func (d *Deck) Draw(count int) (cards []Card, err error) {
 	if count > len(d.Cards) {
 		return nil, errors.New("Not enough cards left in the deck")
